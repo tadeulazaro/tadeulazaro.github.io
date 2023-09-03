@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Controle de Despesas</title>
+</head>
+<body>
+  <h1>Controle de Despesas</h1>
+
+  <div>
+    <label for="nomeDespesa">Nome da Despesa:</label>
+    <input type="text" id="nomeDespesa">
+  </div>
+
+  <div>
+    <label for="tipoDespesa">Tipo de Despesa:</label>
+    <input type="text" id="tipoDespesa">
+  </div>
+
+  <div>
+    <label for="valorDespesa">Valor da Despesa:</label>
+    <input type="number" id="valorDespesa">
+  </div>
+
+  <div>
+    <label for="tipoCredito">Tipo de Crédito:</label>
+    <select id="tipoCredito">
+      <option value="credito">Crédito</option>
+      <option value="debito">Débito</option>
+    </select>
+  </div>
+
+  <button onclick="adicionarDespesa()">Adicionar Despesa</button>
+
+  <div id="listaDespesas">
+    <!-- Aqui serão exibidas as despesas -->
+  </div>
+
+  <div id="totalDespesas">
+    <!-- Aqui será exibido o total das despesas -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
