@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Despesa</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos para a barra de navegação */
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar-brand, .navbar-text {
+      color: #fff;
+    }
+
+    /* Estilos para o conteúdo do formulário */
+    .container {
+      margin-top: 10px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para o botão "Salvar" */
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .header {
+  background-color: #525252;
+  padding: 1px;
+  text-align: center;
+  margin: 30px auto; /* Define as margens superiores e inferiores como 20px e as laterais como 'auto' */
+  border-radius: 5px;
+  width: 60%; /* Defina a largura desejada, por exemplo, 50% */
+}
+
+.logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .logo span {
+      background-color: #08a121;
+      padding: 15px 10px;
+      border-radius: 15px;
+      
+    }
+    .add-button {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    /* Estilize os links na sua barra de navegação */
+.navbar a {
+  text-decoration: none; /* Remove o sublinhado */
+  /* Outros estilos, como cor e hover, podem ser adicionados aqui */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Barra de navegação -->
+
+  <div class="header">
+    <a href="http://localhost:3000/despesas" class="logo-link">
+      <h2 class="logo">C o n t r o l e - <span>D e s p e s a s - T L</span></h2>
+    </a>
+  </div>
+  
+
+
+  <!-- Conteúdo da sua página de edição -->
+  <div class="container">
+    <h1>Editar Despesa</h1>
+
+    <!-- Formulário de edição -->
+    <form action="/editarDespesa" method="POST">
+      <!-- Campos de edição aqui -->
+      <div class="col-md-6">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control form-control-sm" id="nome" name="nome" value="<%= despesa.nome %>">
+      </div>
+
+      <div class="col-md-6">
+        <label for="tipoPagamento">Tipo de Pagamento:</label>
+        <input type="text" class="form-control form-control-sm" id="tipoPagamento" name="tipoPagamento" value="<%= despesa.tipoPagamento %>">
+      </div>
+
+      <div class="col-md-6">
+        <label for="tipoGasto">Tipo de Gasto:</label>
+        <input type="text" class="form-control form-control-sm" id="tipoGasto" name="tipoGasto" value="<%= despesa.tipoGasto %>">
+      </div>
+
+      <div class="col-md-6">
+        <label for="valorGasto">Valor:</label>
+        <input type="text" class="form-control form-control-sm" id="valorGasto" name="valorGasto" value="<%= despesa.valorGasto %>">
+      </div>
+
+      <div class="col-md-6">
+        <label for="dataDespesa">Data:</label>
+        <input type="text" class="form-control form-control-sm" id="dataDespesa" name="dataDespesa" value="<%= despesa.dataDespesa %>">
+      </div>
+<br>
+      <input type="hidden" name="id" value="<%= id %>">
+      <button type="submit" class="btn btn-primary add-button">Salvar</button>
+    </form>
+  </div>
+
+  
+
+</body>
+</html>
